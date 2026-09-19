@@ -19,8 +19,11 @@ public class GetAttributeConcept {
 		String classValue = driver.findElement(By.linkText("Forgotten Password")).getDomAttribute("class");
 		System.out.println(classValue);//null
 
-		String classVal = driver.findElement(By.linkText("Forgotten Password")).getDomProperty("class");
-		System.out.println(classVal);//null
+		String className = driver.findElement(By.linkText("Forgotten Password")).getDomProperty("className");
+		System.out.println(className);//null
+		
+		String placeHolderValue = driver.findElement(By.id("input-email")).getDomAttribute("placeholder");
+		System.out.println(placeHolderValue);
 		
 		
 		String outerHTML = driver.findElement(By.id("input-email")).getDomProperty("outerHTML");

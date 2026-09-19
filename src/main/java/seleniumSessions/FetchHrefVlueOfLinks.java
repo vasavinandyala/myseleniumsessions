@@ -17,6 +17,7 @@ public class FetchHrefVlueOfLinks {
 		driver.get("https://amazon.in");
 		
 		List<WebElement> linkslist = driver.findElements(By.tagName("a"));
+		System.out.println(linkslist.size());
 		
 		for(WebElement e : linkslist) {
 			

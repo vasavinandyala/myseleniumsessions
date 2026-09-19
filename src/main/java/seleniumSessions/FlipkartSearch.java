@@ -25,7 +25,7 @@ public class FlipkartSearch {
 		
 		driver.get("https://amazon.com/");
 		
-		By identify = By.id("nav-search-keywords");
+		//By identify = By.id("nav-search-keywords");
 		
 
 	}

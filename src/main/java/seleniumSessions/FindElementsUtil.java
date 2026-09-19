@@ -16,13 +16,13 @@ public class FindElementsUtil {
 	public static void main(String[] args) {
 
 		driver = new ChromeDriver();
-		driver.get("https://naveenautomationlabs.com/opencart/index.php?route=account/login");
-		
-		By links = By.tagName("a");
-		By images = By.tagName("img");
+		//driver.get("https://naveenautomationlabs.com/opencart/index.php?route=account/login");
+		driver.get("https://amazon.com");
 		
 		ElementUtil eleUtil = new ElementUtil(driver);
 
+		By links = By.tagName("a");
+		By images = By.tagName("img");
 		
 		int totalLinks = eleUtil.getElementsCount(links);
 		int totalImages = eleUtil.getElementsCount(images);
@@ -36,7 +36,7 @@ public class FindElementsUtil {
 		}
 		
 		if(actualTextLinks.contains("Login")) {
-			System.out.println("Login is available pn the screen");
+			System.out.println("Login is available on the screen");
 		}
 		
 		if(actualTextLinks.contains("Register")) {

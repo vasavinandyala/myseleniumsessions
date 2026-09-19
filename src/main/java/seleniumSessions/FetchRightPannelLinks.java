@@ -30,7 +30,7 @@ public class FetchRightPannelLinks {
 
 		int actLinksCount = eleUtil.getElementsCount(rightPanelLinks);
 		System.out.println(actLinksCount);
-		if(actLinksCount ==13) {
+		if(actLinksCount == 13) {
 			System.out.println("PASS");
 		}
 		List<String> actListext = eleUtil.getElementsTextList(rightPanelLinks);

@@ -2,8 +2,6 @@ package seleniumSessions;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-//import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class WebElementConcept {
 	
@@ -11,9 +9,12 @@ public class WebElementConcept {
 	
 	public static void main(String[] args) {
 		
-		driver = new ChromeDriver();
+		BrowserUtil brUtil = new BrowserUtil();
+		
+		driver = brUtil.initDriver("chrome");
+		brUtil.launchUrl("https://naveenautomationlabs.com/opencart/index.php?route=account/login");
 
-		driver.get("https://naveenautomationlabs.com/opencart/index.php?route=account/login");
+		//driver.get("https://naveenautomationlabs.com/opencart/index.php?route=account/login");
 		
 		//driver.findElement(By.id("input-email")).sendKeys("tom@gmail.com");
 		//driver.findElement(By.id("input-password")).sendKeys("Tom@123");
@@ -32,6 +33,9 @@ public class WebElementConcept {
 		ElementUtil eleUtil = new ElementUtil(driver);
 		eleUtil.doSendKeys(email, "tom@gmail.com");
 		eleUtil.doSendKeys(pwd, "Tom@123");
+		
+		
+		brUtil.quitBrowser();
 		
 	}
 

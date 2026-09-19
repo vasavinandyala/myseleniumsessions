@@ -1,6 +1,8 @@
 package seleniumSessions;
 
-//import org.openqa.selenium.By;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -14,17 +16,14 @@ public class WebElementException {
 		driver.get("https://naveenautomationlabs.com/opencart/index.php?route=account/login");
 		
 		//create webelement + perform action
-	/*	try {
+		try {
 			driver.findElement(By.id("input-emai")).sendKeys("Vasavi@gmail.com");
-		}*/
-		
-		//boolean flag = driver.findElement(By.id("input-emai")).isDisplayed();
-		//System.out.println(flag);
-
-
-		
-		
-		
+		}
+		catch(NoSuchElementException e) {
+			System.out.println("Element is not found");
+			e.printStackTrace();
+		}
+		System.out.println("title : " + driver.getTitle());
 		
 		
 	}

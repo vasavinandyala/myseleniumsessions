@@ -13,13 +13,19 @@ public class MultipleElements {
 
 	public static void main(String[] args) {
 		
+		//fetch total no of links on the page
+		//then print the text of each link on the console
+		//links -- htmltag: <a>
+		
 		driver = new ChromeDriver();
 		driver.get("https://naveenautomationlabs.com/opencart/index.php?route=account/login");
 		//driver.get("https://amazon.in");
+		
 		List<WebElement> linkslist = driver.findElements(By.tagName("a"));
 		int totallinks = linkslist.size();
 		System.out.println("Total links : " + totallinks);
 		
+		//print the text of each link : iterate this list : using for loop:
 		//index - for loop:
 		
 		for(int i=0 ; i<totallinks; i++) {
@@ -51,7 +57,6 @@ public class MultipleElements {
 		List<WebElement> imgList = driver.findElements(By.tagName("img"));
 		int image = imgList.size();
 		System.out.println(image);
-		
 		
 		
 	}
